@@ -14,7 +14,7 @@ def frequency_return(string,letter):
 
 
 
-
+index={}
 
 #Scan all letters: if a letter has not been searched then count
 
@@ -25,15 +25,19 @@ def word_frequency_letters(string):
     target=0
     frequency=0
     
-    while len(range_string)!=0:
+
+    if string not in index:
+        while len(range_string)!=0:
             datastore.append(range_string[target])
             frequency = (int(frequency_return(range_string,range_string[target]))/length_string)
             datastore.append(frequency)
-
             range_string = range_string.replace(range_string[target],'')
-    return datastore
+    index.update({string: datastore})
+    return index
 
-print (word_frequency_letters("alllaric"))
+print (word_frequency_letters("books"))
+
+
     
     
    
