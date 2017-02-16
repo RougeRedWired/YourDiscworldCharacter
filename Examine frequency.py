@@ -4,11 +4,29 @@ So first count the number of occurences for a letter and then divide it by len(s
 import xlsxwriter
 import openpyxl
 
-def load_index_to_xls(filename,index)
+#data handling function
+def load_index_to_xls(filename,index):
+   
+#create the point handling function
+   def score(string):
+      score = 5
+      if string.find(letter)!=-1:
+         if string[letter][frequency] == index[string][letter][frequency]:
+            score +=5
+         elif (string[letter][frequency] - index[string][letter][frequency] <= 1):
+         score +=3
+
+         elif (string[letter][frequency] - index[string][letter][frequency] > 1):
+         score +=1
+
+      return score
+      
+         
+         
 
 #Create a file to put the data in
 def create_index_file():
-   workbook = xlsxwriter.Workbook('hello.xlsx')
+   workbook = xlsxwriter.Workbook('index.xlsx')
    worksheet = workbook.add_worksheet()
    worksheet.write('A1', 'Word')
    workbook.close() 
@@ -25,9 +43,13 @@ def frequency_return(string,letter):
            count+=1
     return count
 
-
-
 index={}
+
+from openpyxl import load_workbook
+index = load_workbook('index.xlsx')
+
+
+
 
 #Scan all letters: if a letter has not been searched then count
 
