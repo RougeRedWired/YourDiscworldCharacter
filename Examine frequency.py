@@ -38,6 +38,7 @@ def index_string(string):
       
       index.update({string: (get_frequency(string))})
     return index
+
     
 #basically what I want to achieve is compare the frequency between the two strings. I need to collect those frequencies from the first string. Once it is done several tests: Which string has the most identical letters and if there are several of them, match them against their respective probabilities. Structure is as follow: compare the keys with nested loops? What I would do is compare the element against all the indexed elemnts and see how much the element scores against each then return the word with which it has the best score. use map/filter and the likes forget the clunky tools
 
@@ -50,13 +51,7 @@ def compare_frequency(name):
     for name_datastore[i] in name_datastore:
       for key in index:
         if name_datastore[i] in index[i]:
-          
-    
-
-  
-  
-  
-
+ 
 index_string("string")
 index_string("string")
 index_string("balloon")
