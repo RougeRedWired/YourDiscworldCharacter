@@ -44,14 +44,28 @@ def index_string(string):
 
 def compare_frequency(name):
   count=0
-  
+  score = 0
+  ranking = {}
   name_datastore=get_frequency(name)
   while count< len(name_datastore):
-    for name_datastore[i] in name_datastore:
+    for name_datastore[count] in name_datastore:
       for key in index:
-        if name_datastore[i] in index[i]:
+        if name_datastore[count] in index[count]:
           
-    
+          if abs(name_datastore[count]-index[key][name_datastore[count]])>0.04 : 
+            score+=1
+          if abs(name_datastore[count]-index[key][name_datastore[count]])>0.03 : 
+            score+=2
+          if abs(name_datastore[count]-index[key][name_datastore[count]])>0.02 :  
+            score+=3
+          if abs(name_datastore[count]-index[key][name_datastore[count]])>0:
+            score+=4
+          if abs(name_datastore[count]-index[key][name_datastore[count]])==0:
+            score+=10
+          else:
+            score+=0
+      ranking.update({index[key]:score})
+      count+=1
 
   
   
@@ -63,3 +77,5 @@ index_string("balloon")
 index_string("drapeau")
 
 print(index)
+
+compare_frequency("pablo")
