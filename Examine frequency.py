@@ -1,75 +1,27 @@
+from collections import Counter
 
 
-####################################Don't Touch!########################################################
-#data handling function
-
-index={}
-#Get frequency of a letter
-
-def frequency_return(string,letter):
-    count=0
-    
-    for letters in string:
-       if letters==letter:
-           count+=1
-    return count
-
-#Scan all letters: if a letter has not been searched then count
-def get_frequency(string):
-  range_string=string
-  length_string=len(string)
-  datastore={}
-  target=0
-  frequency=0
-  while len(range_string)!=0:
-           # datastore.append(range_string[target])
-            frequency = (int(frequency_return(range_string,range_string[target]))/length_string)
-            frequency = format(frequency, '.2f')
-            datastore.update({range_string[target]:frequency})
-            range_string = range_string.replace(range_string[target],'')
-  return datastore          
-          
-def index_string(string):
-  
-    if string not in index:
-      
-      index.update({string: (get_frequency(string))})
-    return index
-   
-index_string("pablo")
-index_string("rocky")
-index_string("rigo")
-index_string("nino")
-
-print (index)
-
-###############################################################################################
-
-def comparator(string,database):
-  target = string
-  indextarget = database[0]
-  return database[0]
-  
- 
+def get_proportions(word):
+    frequencies = dict(Counter(word))
+    for letter, value in frequencies.items():
+        frequencies[letter] = float(value) / len(word)
+    return frequencies
 
 
+def compare_to_dict(word, compare_to):
+    props = get_proportions(word)
+    comparison_scores = []
+    for key in compare_to.keys():
+        word_distance = sum(abs(props.get(letter, 0) - compare_to[key].get(letter, 0))
+                            for letter in set(word + key))
+        comparison_scores.append((key, word_distance))
+    return sorted(comparison_scores, key=lambda x: x[1])
 
 
-print(comparator("bono", index))
+comparison_dict = {}
+for word in ['pablo', 'rocky', 'rigo', 'nino']:
+    comparison_dict[word] = get_proportions(word)
 
+print(comparison_dict)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+print(compare_to_dict('baobab', comparison_dict))
