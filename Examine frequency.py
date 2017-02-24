@@ -24,4 +24,5 @@ for word in ['pablo', 'rocky', 'rigo', 'nino']:
 
 print(comparison_dict)
 
+
 print(compare_to_dict('baobab', comparison_dict))
