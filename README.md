@@ -3,9 +3,14 @@ This is a short project that will be written in Python. Index queries and return
 
 Intro:
 
-After starting the FCC and sort of hitting a wall with the Udacity course, I decided to have a bit of fun with it. 
-I reached the create an index in the udacity program. Since I had issues with it, I decided to work on it, using a separate project. 
-And this is how this came to be: 
+Ever heard about Terry Pratchett and his Discworld Chronicles? This project is based upon his universe and awesome world. Bookworm, I read most of the books myself when I was a kid. Fast forwarding to a few weeks back, I was doing at the same time Free Code Camp and Udacity Introduction to Computer Programming ( Which I highly recommend!). 
+I am sure that you often see these " Who are you game based on your answers, correct?" Well, while the outcome here is the same, the way to do it is different: 
+It gives the closest match to the word you input, here your name ;).
+
+Feedback needed: 
+What you would like to see
+What bugs did you notice? 
+General feedback... 
 
 Features:
 **UPDATE **
