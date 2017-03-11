@@ -10,7 +10,7 @@ And this is how this came to be:
 Features:
 
 MVP:
-Check your name against an index of Discworld Characters, establish a number of points based on how closely the letter frequency matches yours, return the name with the highest number.
+Check your name against an index of Discworld Characters, establish a distance between the names in the dictionary and return the one with the shortest distance
 
 Additional coming features : 
 Create an index file to make sure all the names are kept from one launch of the program to another.
