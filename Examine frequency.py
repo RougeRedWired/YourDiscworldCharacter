@@ -17,12 +17,13 @@ def compare_to_dict(word, compare_to):
         comparison_scores.append((key, word_distance))
     return sorted(comparison_scores, key=lambda x: x[1])
 
-
+answer = input("Please enter your name")
 comparison_dict = {}
-for word in ['pablo', 'rocky', 'rigo', 'nino']:
+for word in ['rincewind', 'adora belle', 'the patrician', 'vimes', 'cheery','drumknott','detritus','dorfl','nobb','teatime','death','moist von lipwick','gladys']:
     comparison_dict[word] = get_proportions(word)
 
 print(comparison_dict)
+#need for adding an step where only the word with the shorted distance is given not the distances themselves
+result = compare_to_dict(answer, comparison_dict)
 
-
-print(compare_to_dict('baobab', comparison_dict))
+print (result[0][0])
