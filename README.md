@@ -9,9 +9,9 @@ It gives the closest match to the word you input, here your name ;).
 
 Feedback needed: 
 <ul>
-<il>What you would like to see</il>
-<il>What bugs did you notice? </il>
-<il>General feedback... </il>
+<li>What you would like to see</li>
+<li>What bugs did you notice? </li>
+<li>General feedback... </li>
 </ul>
 Features:
 **UPDATE **
