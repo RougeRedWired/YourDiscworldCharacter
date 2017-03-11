@@ -1,7 +1,7 @@
 # YourDiscworldCharacter
 This is a short project that will be written in Python. Index queries and return closest frequency name.
 
-<h1>Intro</h1>:
+<h1>Intro:</h1>
 
 Ever heard about Terry Pratchett and his Discworld Chronicles? This project is based upon his universe and awesome world. Bookworm, I read most of the books myself when I was a kid. Fast forwarding to a few weeks back, I was doing at the same time Free Code Camp and Udacity Introduction to Computer Programming ( Which I highly recommend!). 
 I am sure that you often see these " Who are you game based on your answers, correct?" Well, while the outcome here is the same, the way to do it is different: 
