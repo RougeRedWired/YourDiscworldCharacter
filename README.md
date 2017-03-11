@@ -8,10 +8,11 @@ I am sure that you often see these " Who are you game based on your answers, cor
 It gives the closest match to the word you input, here your name ;).
 
 Feedback needed: 
-What you would like to see
-What bugs did you notice? 
-General feedback... 
-
+<ul>
+<il>What you would like to see</il>
+<il>What bugs did you notice? </il>
+<il>General feedback... </il>
+</ul>
 Features:
 **UPDATE **
 MVP Done
